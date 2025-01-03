@@ -15,5 +15,15 @@ export default {
       }
     }
   },
-  plugins: [daisyui]
+  plugins: [daisyui],
+  daisyui: {
+    themes: true,
+    darkTheme: "cupcake",
+    base: true,
+    styled: true,
+    utils: true,
+    prefix: "",
+    logs: false,
+    themeRoot: ":root"
+  }
 } satisfies Config;
