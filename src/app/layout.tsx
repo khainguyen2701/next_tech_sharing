@@ -32,11 +32,11 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        data-theme=''
+        // data-theme=''
         className={`${inter.variable} ${montserrat.variable} ${inconsolata.variable} antialiased`}
       >
         <HeaderMainLayout />
-        <main className='container mx-auto'>{children}</main>
+        <main className='container mx-auto my-4'>{children}</main>
         <FooterMainLayout />
       </body>
     </html>

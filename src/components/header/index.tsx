@@ -1,65 +1,135 @@
+"use client";
+import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineLogin } from "react-icons/ai";
+import avatar from "@/public/avatar.jpg";
+import { useEffect, useState } from "react";
 
 const headerLink = [
+  // {
+  //   id: "header-1",
+  //   title: "Home",
+  //   url: "/"
+  // },
+  // { id: "header-2", title: "Feature", url: "/feature" },
+  // { id: "header-3", title: "Marketing", url: "/marketing" }
+];
+
+const dropdownLink = [
   {
-    id: "header-1",
-    title: "Home",
-    url: "/"
+    id: "profile",
+    title: "Profile",
+    url: "/profile",
+    type: "link"
   },
-  { id: "header-2", title: "Feature", url: "/feature" },
-  { id: "header-3", title: "Marketing", url: "/marketing" }
+  { id: "logout", title: "Logout", url: "/logout", type: "function" }
 ];
 
 const HeaderMainLayout = () => {
+  const isAuthor = true;
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <header className='sticky start-0 top-0 w-full border-b border-gray-200 bg-white shadow-lg dark:border-gray-600 dark:bg-gray-900'>
-      <nav className='container mx-auto'>
-        <div className='flex max-w-screen-xl flex-wrap items-center justify-between py-4'>
-          <Link
-            href='/'
-            className='font-montserrat flex items-center text-3xl font-semibold text-cyan-700'
-          >
-            Technical Sharing
-          </Link>
-          <div className='flex space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse'>
-            <div className='group flex items-center justify-center gap-2 text-xl font-medium text-cyan-700'>
-              <AiOutlineLogin className='transition duration-300 group-hover:text-cyan-500' />
-              <Link
-                href='/login'
-                className='font-inter relative text-cyan-700 transition duration-300 group-hover:text-cyan-500'
-              >
-                Login
-                <span className='absolute bottom-0 left-0 h-[2px] w-0 bg-cyan-500 transition-all duration-300 ease-in-out group-hover:w-full'></span>
-              </Link>
-            </div>
-          </div>
-          <div
-            className='hidden w-full items-center justify-between md:order-1 md:flex md:w-auto'
-            id='navbar-sticky'
-          >
-            <div className='font-inter flex flex-col gap-10 text-base font-medium md:flex-row md:gap-8 md:text-lg'>
-              {headerLink.map((item) => {
-                return (
-                  <div
-                    key={item.id}
-                    className='group flex items-center justify-center gap-2 text-xl font-medium text-cyan-700'
+    <>
+      <div className='mx-auto border-b border-gray-200 bg-white p-4 text-center font-inter tracking-wide shadow-sm dark:border-gray-600 dark:bg-gray-800'>
+        Ở đây không chỉ là chia sẻ kiến thức, mà còn là cách tự học, kết nối và
+        để lại dấu ấn trong thế giới công nghệ
+      </div>
+      <header
+        className={`sticky start-0 top-0 z-50 w-full bg-white dark:bg-gray-900 ${
+          isScrolled
+            ? "border-b border-gray-200 shadow-lg dark:border-gray-600"
+            : ""
+        }`}
+      >
+        <nav className='container mx-auto'>
+          <div className='flex max-w-screen-xl flex-wrap items-center justify-between py-4'>
+            <Link
+              href='/'
+              className='flex items-center font-montserrat text-3xl font-semibold tracking-wide text-cyan-700'
+            >
+              Technical Sharing
+            </Link>
+            <div className='flex gap-4 space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse'>
+              {isAuthor ? (
+                <div className='group flex items-center justify-center gap-2 text-xl font-medium text-cyan-700'>
+                  <AiOutlineLogin className='transition duration-300 group-hover:text-cyan-500' />
+                  <Link
+                    href='/login'
+                    className='relative font-inter tracking-wide text-cyan-700 transition duration-300 group-hover:text-cyan-500'
                   >
-                    <Link
-                      href={item.url}
-                      className='font-inter relative text-cyan-700 transition duration-300 group-hover:text-cyan-500'
+                    Login
+                    <span className='absolute bottom-0 left-0 h-[2px] w-0 bg-cyan-500 transition-all duration-300 ease-in-out group-hover:w-full'></span>
+                  </Link>
+                </div>
+              ) : (
+                <details className='dropdown'>
+                  <summary className='btn m-1 border-none bg-transparent text-base-content shadow-none hover:bg-transparent hover:text-base-content'>
+                    <div className='avatar transition-transform duration-300 hover:scale-110'>
+                      <div className='w-12 rounded-full ring-2 ring-transparent'>
+                        <Image
+                          width='50'
+                          alt='Avatar'
+                          height='50'
+                          src={avatar}
+                        />
+                      </div>
+                    </div>
+                  </summary>
+                  <ul className='menu dropdown-content z-[1] w-52 rounded-box bg-base-100 p-2 shadow'>
+                    {dropdownLink.map((item) => {
+                      return item.type === "link" ? (
+                        <li key={item.id}>
+                          <Link href={item.url}>{item.title}</Link>
+                        </li>
+                      ) : (
+                        <li key={item.id}>
+                          <Link href={item.url}>{item.title}</Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </details>
+              )}
+            </div>
+            <div
+              className='hidden w-full items-center justify-between md:order-1 md:flex md:w-auto'
+              id='navbar-sticky'
+            >
+              <div className='flex flex-col gap-10 font-inter text-base font-medium md:flex-row md:gap-8 md:text-lg'>
+                {headerLink.map((item) => {
+                  return (
+                    <div
+                      key={item.id}
+                      className='group flex items-center justify-center gap-2 text-xl font-medium text-cyan-700'
                     >
-                      {item.title}
-                      <span className='absolute bottom-0 left-0 h-[2px] w-0 bg-cyan-500 transition-all duration-300 ease-in-out group-hover:w-full'></span>
-                    </Link>
-                  </div>
-                );
-              })}
+                      <Link
+                        href={item.url}
+                        className='relative font-inter text-cyan-700 transition duration-300 group-hover:text-cyan-500'
+                      >
+                        {item.title}
+                        <span className='absolute bottom-0 left-0 h-[2px] w-0 bg-cyan-500 transition-all duration-300 ease-in-out group-hover:w-full'></span>
+                      </Link>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
-        </div>
-      </nav>
-    </header>
+        </nav>
+      </header>
+    </>
   );
 };
 

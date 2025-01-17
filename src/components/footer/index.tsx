@@ -7,8 +7,10 @@ const FooterMainLayout = () => {
       <div className='container mx-auto flex flex-col justify-between md:flex-row'>
         <aside className='mb-4 md:mb-0'>
           <div className='flex flex-col gap-4'>
-            <p className='font-inter text-2xl font-bold'>TECHNICAL SHARING</p>
-            <p className='font-inter text-base font-light'>
+            <p className='font-inter text-2xl font-bold tracking-wider'>
+              TECHNICAL SHARING
+            </p>
+            <p className='font-inter text-base font-light tracking-wider'>
               Authorize by Khải Nguyễn
               <br />
               Providing trusted technology information since 2025
@@ -16,7 +18,7 @@ const FooterMainLayout = () => {
           </div>
         </aside>
         <nav>
-          <h6 className='font-inter footer-title mb-4 text-lg'>Social</h6>
+          <h6 className='footer-title mb-4 font-inter text-lg'>Social</h6>
           <div className='grid grid-cols-3 justify-center gap-4 md:grid-flow-col md:justify-start'>
             <Link href='#' target='_blank' className='h-6 w-6'>
               <svg
