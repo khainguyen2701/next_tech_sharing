@@ -1,8 +1,9 @@
-import FooterMainLayout from "@/components/footer";
-import HeaderMainLayout from "@/components/header";
+import FooterMainLayout from "@/app/Layout/footer";
+import HeaderMainLayout from "@/app/Layout/header";
 import type { Metadata } from "next";
 import { Inter, Montserrat, Inconsolata } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@material-tailwind/react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -32,7 +33,6 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        // data-theme=''
         className={`${inter.variable} ${montserrat.variable} ${inconsolata.variable} antialiased`}
       >
         <HeaderMainLayout />

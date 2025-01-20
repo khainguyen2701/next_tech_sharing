@@ -43,8 +43,8 @@ const HeaderMainLayout = () => {
   return (
     <>
       <div className='mx-auto border-b border-gray-200 bg-white p-4 text-center font-inter tracking-wide shadow-sm dark:border-gray-600 dark:bg-gray-800'>
-        Ở đây không chỉ là chia sẻ kiến thức, mà còn là cách tự học, kết nối và
-        để lại dấu ấn trong thế giới công nghệ
+        It's not just about sharing knowledge, it's about self-learning,
+        connecting and leaving your mark in the tech world.
       </div>
       <header
         className={`sticky start-0 top-0 z-50 w-full bg-white dark:bg-gray-900 ${

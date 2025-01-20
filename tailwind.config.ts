@@ -1,7 +1,8 @@
 import type { Config } from "tailwindcss";
 import daisyui from "daisyui";
+import withMT from "@material-tailwind/react/utils/withMT";
 
-export default {
+export default withMT({
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -40,4 +41,4 @@ export default {
     logs: false,
     themeRoot: ":root"
   }
-} satisfies Config;
+} satisfies Config);
