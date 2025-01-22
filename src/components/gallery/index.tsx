@@ -49,7 +49,7 @@ const MasonryGridGallery = () => {
         const isLargeCard = index === 0;
 
         return (
-          <div className='h-[360px] sm:h-[420px] lg:h-[540px]' key={index}>
+          <div className='h-[540px] sm:h-[420px] lg:h-[540px]' key={index}>
             {item?.children.length === 0 ? (
               <GalleryItems item={item} isLargeCard={isLargeCard} />
             ) : (

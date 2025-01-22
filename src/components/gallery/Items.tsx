@@ -16,7 +16,7 @@ const GalleryItems = ({ isLargeCard, item }: GalleryItemsProps) => {
         <div className='absolute inset-0 rounded-lg bg-black bg-opacity-20'></div>
         {/* Content */}
         <div className='absolute inset-0 flex flex-col justify-end p-4 text-white'>
-          <span className='bg-light-green-200 mb-2 inline w-fit rounded-lg bg-opacity-25 px-3 py-1 font-inter text-lg font-semibold tracking-wide text-[#003aae]'>
+          <span className='mb-2 inline w-fit rounded-lg bg-light-green-200 bg-opacity-25 px-3 py-1 font-inter text-lg font-semibold tracking-wide text-[#003aae]'>
             {item.category}
           </span>
           <Link
@@ -28,7 +28,7 @@ const GalleryItems = ({ isLargeCard, item }: GalleryItemsProps) => {
             {item.title}
           </Link>
           {item.description && isLargeCard && (
-            <p className='mt-2 font-inter text-sm tracking-wide'>
+            <p className='mt-2 line-clamp-1 overflow-hidden truncate text-ellipsis font-inter text-sm tracking-wide'>
               {item.description}
             </p>
           )}
