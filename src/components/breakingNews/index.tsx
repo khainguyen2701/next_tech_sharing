@@ -116,7 +116,7 @@ const BreakingNews = () => {
 
   return (
     <div className='w-full overflow-hidden'>
-      <div className='w-fit rounded-tl-lg rounded-tr-lg border border-b-0 border-[#3756f7] bg-[#3756f7] p-2 font-inter text-[15px] tracking-wide text-white'>
+      <div className='w-fit rounded-tl-lg rounded-tr-lg border border-b-0 border-[#3756f7] bg-[#3756f7] p-2 font-inconsolata text-[15px] tracking-wide text-white'>
         Breaking News
       </div>
       <div className='relative flex w-full'>

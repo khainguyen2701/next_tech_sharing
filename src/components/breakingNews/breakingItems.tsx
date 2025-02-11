@@ -16,12 +16,12 @@ const BreakingItems = ({ item }: BreakingItemsProps) => {
         />
       </div>
       <div className='flex w-[60%] flex-col gap-4'>
-        <p className='font-inter text-sm font-medium tracking-wide text-gray-500'>
+        <p className='font-inconsolata text-sm font-medium tracking-wide text-gray-500'>
           {item.date}
         </p>
         <Link
           href='/'
-          className='line-clamp-2 cursor-pointer overflow-hidden text-ellipsis font-inter text-base font-semibold tracking-wide hover:text-[#0d6efd]'
+          className='line-clamp-2 cursor-pointer overflow-hidden text-ellipsis font-inconsolata text-lg font-semibold tracking-wide hover:text-[#0d6efd]'
         >
           {item.title}
         </Link>

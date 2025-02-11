@@ -16,23 +16,23 @@ const GalleryItems = ({ isLargeCard, item }: GalleryItemsProps) => {
         <div className='absolute inset-0 rounded-lg bg-black bg-opacity-20'></div>
         {/* Content */}
         <div className='absolute inset-0 flex flex-col justify-end p-4 text-white'>
-          <span className='mb-2 inline w-fit rounded-lg bg-light-green-200 bg-opacity-25 px-3 py-1 font-inter text-lg font-semibold tracking-wide text-[#003aae]'>
+          <span className='mb-2 inline w-fit rounded-lg bg-light-green-200 bg-opacity-25 px-3 py-1 font-inconsolata text-lg font-semibold tracking-wide text-[#003aae]'>
             {item.category}
           </span>
           <Link
             href='/'
-            className={`cursor-pointer font-inter font-bold tracking-wide hover:underline ${
+            className={`cursor-pointer font-inconsolata font-bold tracking-wide hover:underline ${
               isLargeCard ? "text-2xl" : "text-lg"
             } leading-tight`}
           >
             {item.title}
           </Link>
           {item.description && isLargeCard && (
-            <p className='mt-2 line-clamp-1 overflow-hidden truncate text-ellipsis font-inter text-sm tracking-wide'>
+            <p className='mt-2 line-clamp-2 overflow-hidden text-ellipsis font-inconsolata text-base tracking-wide'>
               {item.description}
             </p>
           )}
-          <div className='mt-2 flex items-center font-inter text-sm tracking-wide'>
+          <div className='mt-2 flex items-center font-inconsolata text-sm tracking-wide'>
             <span>
               By {item.author} • {item.date}
             </span>

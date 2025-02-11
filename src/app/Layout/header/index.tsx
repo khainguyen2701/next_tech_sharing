@@ -4,15 +4,16 @@ import Link from "next/link";
 import { AiOutlineLogin } from "react-icons/ai";
 import avatar from "@/public/avatar.jpg";
 import { useEffect, useState } from "react";
+import logo from "@/public/logo.jpeg";
 
 const headerLink = [
-  // {
-  //   id: "header-1",
-  //   title: "Home",
-  //   url: "/"
-  // },
-  // { id: "header-2", title: "Feature", url: "/feature" },
-  // { id: "header-3", title: "Marketing", url: "/marketing" }
+  {
+    id: "header-1",
+    title: "Home",
+    url: "/"
+  },
+  { id: "header-2", title: "Feature", url: "/feature" },
+  { id: "header-3", title: "Marketing", url: "/marketing" }
 ];
 
 const dropdownLink = [
@@ -42,8 +43,8 @@ const HeaderMainLayout = () => {
   }, []);
   return (
     <>
-      <div className='mx-auto border-b border-gray-200 bg-white p-4 text-center font-inter tracking-wide shadow-sm dark:border-gray-600 dark:bg-gray-800'>
-        It's not just about sharing knowledge, it's about self-learning,
+      <div className='mx-auto border-b border-gray-200 bg-white p-4 text-center font-inconsolata tracking-wide shadow-sm dark:border-gray-600 dark:bg-gray-800'>
+        Its not just about sharing knowledge, it's about self-learning,
         connecting and leaving your mark in the tech world.
       </div>
       <header
@@ -55,12 +56,21 @@ const HeaderMainLayout = () => {
       >
         <nav className='container mx-auto'>
           <div className='flex max-w-screen-xl flex-wrap items-center justify-between py-4'>
-            <Link
-              href='/'
-              className='flex items-center font-montserrat text-3xl font-semibold tracking-wide text-cyan-700'
-            >
-              Technical Sharing
-            </Link>
+            <div className='flex items-center gap-4'>
+              <Image
+                src={logo.src}
+                alt='logo'
+                width={70}
+                height={70}
+                className='rounded mix-blend-multiply'
+              />
+              <Link
+                href='/'
+                className='hidden items-center font-montserrat text-3xl font-semibold tracking-wide text-cyan-700 sm:flex'
+              >
+                Technical Sharing
+              </Link>
+            </div>
             <div className='flex gap-4 space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse'>
               {isAuthor ? (
                 <div className='group flex items-center justify-center gap-2 text-xl font-medium text-cyan-700'>
