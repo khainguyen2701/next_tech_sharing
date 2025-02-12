@@ -28,12 +28,14 @@ const MainCard = ({ item, isDescription = false }: MainCardProps) => {
       >
         Traveling Makes You More Intelligent and More Energetic
       </Link>
-      <div className='flex flex-row items-center gap-4'>
+      <div
+        className={`flex flex-row items-center ${isDescription ? "gap-2" : "gap-4"}`}
+      >
         <Image
           src={avatar.src}
           alt='avatar.alt'
-          width={50}
-          height={50}
+          width={40}
+          height={40}
           className='h-12 w-12 rounded-full object-cover'
         />
         <p className='font-inconsolata text-sm font-semibold tracking-widest text-[#3756f7]'>

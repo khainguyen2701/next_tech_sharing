@@ -4,11 +4,11 @@ import React from "react";
 const FooterMainLayout = () => {
   return (
     <>
-      <footer className='footer bg-neutral p-10 text-neutral-content'>
+      <footer className='footer bg-neutral py-10 text-neutral-content'>
         <div className='container mx-auto flex flex-col justify-between md:flex-row'>
           <aside className='mb-4 md:mb-0'>
             <div className='flex flex-col gap-4'>
-              <p className='font-inter text-2xl font-bold tracking-widest'>
+              <p className='font-inter text-xl font-bold tracking-widest sm:text-2xl'>
                 TECHNICAL SHARING
               </p>
               <p className='font-inconsolata text-base font-light tracking-wider'>
