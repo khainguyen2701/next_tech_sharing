@@ -1,9 +1,10 @@
 import React from "react";
 import HighLightTitle from "../highlight";
 import PostItem from "./postItem";
+import { NewsDetail } from "@/app/_lib/type/posts.type";
 
 interface PopularPostsProps {
-  posts: any[];
+  posts: NewsDetail[];
 }
 
 const PopularPosts = ({ posts }: PopularPostsProps) => {
