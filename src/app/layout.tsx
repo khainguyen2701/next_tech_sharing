@@ -1,9 +1,9 @@
-import FooterMainLayout from "@/app/layout/footer";
-import HeaderMainLayout from "@/app/layout/header";
 import type { Metadata } from "next";
 import { Inconsolata, Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 import "dayjs/locale/zh-cn";
+import HeaderMainLayout from "./Layout/header";
+import FooterMainLayout from "./Layout/footer";
 
 const inter = Inter({
   subsets: ["latin"],

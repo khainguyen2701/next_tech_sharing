@@ -34,7 +34,7 @@ export default function Home() {
         <SponsoredNews />
       </Suspense>
       <SubscribeNews />
-      <MyEditor />
+      {/* <MyEditor /> */}
     </div>
   );
 }
