@@ -12,20 +12,13 @@ const SubscribeNews = () => {
 
   return (
     <div>
-      <div className='relative h-[450px]'>
-        <Image
-          src={image.src}
-          alt='image.alt'
-          fill
-          sizes='100vw'
-          className='h-full w-full rounded-xl bg-cover bg-center bg-no-repeat'
-        />
-        <div className='absolute left-1 top-1 z-10 flex h-full w-full flex-col items-center justify-center p-4 sm:p-0'>
+      <div className='relative h-[450px] bg-gradient-to-t from-blue-50 to-green-50'>
+        <div className='absolute top-1 z-10 flex h-full w-full flex-col items-center justify-center p-4 sm:p-0'>
           <div className='flex flex-col items-center justify-center gap-4'>
-            <p className='text-center font-inconsolata text-3xl font-semibold text-red-50 sm:text-5xl'>
+            <p className='text-center font-inconsolata text-3xl font-semibold text-neutral-500 sm:text-5xl'>
               Never miss any Update!
             </p>
-            <p className='text-center font-inconsolata text-xl font-semibold text-red-50 sm:text-2xl'>
+            <p className='text-center font-inconsolata text-xl font-semibold text-neutral-500 sm:text-2xl'>
               Get the freshest headlines and updates sent uninterrupted to your
               inbox.
             </p>
@@ -34,7 +27,7 @@ const SubscribeNews = () => {
             <input
               maxLength={200}
               type='text'
-              className='flex-1 bg-transparent px-4 py-4 font-inconsolata tracking-wider text-white focus:outline-none'
+              className='flex-1 bg-transparent px-4 py-4 font-inconsolata tracking-wider text-neutral-500 focus:outline-none'
               placeholder='Type your email'
               value={email}
               onChange={(e) => setEmail(e.target.value)}

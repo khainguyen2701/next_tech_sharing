@@ -36,7 +36,7 @@ export default function RootLayout({
         className={`${inter.variable} ${montserrat.variable} ${inconsolata.variable} antialiased`}
       >
         <HeaderMainLayout />
-        <main className='container mx-auto my-4'>{children}</main>
+        <main>{children}</main>
         <FooterMainLayout />
       </body>
     </html>

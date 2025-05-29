@@ -5,7 +5,7 @@ import { posts } from "@/app/until/mockData/posts";
 
 const SponsoredNews = () => {
   return (
-    <div className='flex flex-col gap-8'>
+    <div className='container mx-auto flex flex-col gap-8'>
       <HighLightTitle title='Sponsored News' />
       <div className='sm:col-span-4 lg:col-span-4'>
         <div className='grid grid-cols-1 gap-6 sm:grid-cols-4'>

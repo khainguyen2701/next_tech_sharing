@@ -20,7 +20,7 @@ const PostItem = ({ post }: PostItemProps) => {
         <p className='font-inconsolata text-[#444444]'>19 Jun 2022</p>
         <Link
           href='/'
-          className='line-clamp-2 overflow-hidden text-ellipsis font-inconsolata font-semibold tracking-wide hover:text-[#3756f7]'
+          className='line-clamp-2 overflow-hidden text-ellipsis font-inconsolata font-semibold tracking-wide hover:text-neutral-400'
         >
           Perfect Photo Clicking Idea You Must Know.
         </Link>

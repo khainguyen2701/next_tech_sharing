@@ -1,20 +1,17 @@
 "use client";
 
-import BreakingNews from "@/components/breakingNews";
-import MasonryGridGallery from "@/components/gallery";
+import SponsoredNews from "@/components/sponsoredNews";
 import TodayTopHighlight from "@/components/todayTop";
+import dynamic from "next/dynamic";
 import { Suspense } from "react";
 import Loading from "./loading";
-import SponsoredNews from "@/components/sponsoredNews";
-import dynamic from "next/dynamic";
 
 const SubscribeNews = dynamic(() => import("@/components/subscribe"), {
   loading: () => <Loading />,
   ssr: false
 });
 
-const MyEditor = dynamic(() => import("@/components/editor"), {
-  loading: () => <Loading />,
+const TechPromo = dynamic(() => import("@/components/TechnicalPromo"), {
   ssr: false
 });
 
@@ -22,11 +19,9 @@ export default function Home() {
   return (
     <div className='flex flex-col gap-16'>
       <Suspense fallback={<Loading />}>
-        <MasonryGridGallery />
+        <TechPromo />
       </Suspense>
-      <Suspense fallback={<Loading />}>
-        <BreakingNews />
-      </Suspense>
+
       <Suspense fallback={<Loading />}>
         <TodayTopHighlight />
       </Suspense>

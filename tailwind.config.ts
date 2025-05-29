@@ -14,6 +14,9 @@ export default withMT({
         background: "var(--background)",
         foreground: "var(--foreground)"
       },
+      animation: {
+        "spin-slow": "spin 30s linear infinite"
+      },
       fontFamily: {
         inter: "var(--font-inter)",
         montserrat: "var(--font-montserrat)",

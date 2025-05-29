@@ -16,10 +16,10 @@ const TrendTopicItem = ({ category }: TrendTopicItemProps) => {
       className='group flex cursor-pointer items-center justify-between border-b-[1px] py-4'
       onClick={() => handleRedirectToCategory("123")}
     >
-      <div className='line-clamp-2 overflow-hidden text-ellipsis font-inconsolata text-lg tracking-wider group-hover:cursor-pointer group-hover:text-[#3756f7]'>
+      <div className='line-clamp-2 overflow-hidden text-ellipsis font-inconsolata text-lg tracking-wider group-hover:cursor-pointer group-hover:text-neutral-400'>
         Lifestyle - Example
       </div>
-      <div className='font-inconsolata text-lg tracking-wider group-hover:cursor-pointer group-hover:text-[#3756f7]'>
+      <div className='font-inconsolata text-lg tracking-wider group-hover:cursor-pointer group-hover:text-neutral-400'>
         (123)
       </div>
     </div>
