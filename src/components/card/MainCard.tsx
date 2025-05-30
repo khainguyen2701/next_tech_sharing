@@ -11,7 +11,7 @@ interface MainCardProps {
 }
 const MainCard = ({ item, isDescription = false }: MainCardProps) => {
   return (
-    <div className='flex flex-col gap-4 border-b-[1px] border-gray-300 pb-4'>
+    <div className='flex flex-col gap-4 rounded-lg bg-gradient-to-r from-blue-50 to-green-50 bg-[length:200%_200%] bg-[position:0%_0%] p-4 transition-all duration-500 hover:bg-[position:100%_0%]'>
       <div className='height-[200px] group relative w-full overflow-hidden rounded-lg'>
         <Image
           src={item?.image ?? images1.src}

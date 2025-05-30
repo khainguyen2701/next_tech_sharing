@@ -1,10 +1,8 @@
 "use client";
+import logo from "@/public/logo.jpeg";
 import Image from "next/image";
 import Link from "next/link";
-import { AiOutlineLogin } from "react-icons/ai";
-import avatar from "@/public/avatar.jpg";
 import { useEffect, useState } from "react";
-import logo from "@/public/logo.jpeg";
 
 const HeaderMainLayout = () => {
   const isAuthor = true;
@@ -25,8 +23,8 @@ const HeaderMainLayout = () => {
   return (
     <>
       <div className='mx-auto border-b border-gray-200 bg-gradient-to-r from-blue-50 to-green-50 p-4 text-center font-inconsolata tracking-wide text-gray-600 shadow-sm'>
-        It's not just about sharing knowledge, it's about self-learning,
-        connecting and leaving your mark in the tech world.
+        Không chỉ là chia sẻ kiến ​​thức, mà còn là tự học, kết nối và để lại
+        dấu ấn của bạn trong thế giới công nghệ.
       </div>
 
       <header
