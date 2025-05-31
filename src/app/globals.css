@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@plugin "daisyui";
 
 :root {
   --background: #ffffff;
@@ -27,7 +28,7 @@ body {
 
 /* Ẩn track (nền scrollbar) */
 ::-webkit-scrollbar-track {
-  background: transparent;  
+  background: transparent;
 }
 
 /* Thanh kéo màu xanh */
@@ -45,4 +46,13 @@ body {
 * {
   scrollbar-width: thin;
   scrollbar-color: #4a90e2 transparent;
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
 }
