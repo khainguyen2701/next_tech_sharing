@@ -100,7 +100,7 @@ export default async function PostsPage({
   ];
 
   return (
-    <div className='container mx-auto my-8 flex flex-col gap-6'>
+    <div className='my-8 flex flex-col gap-6'>
       <HighLightTitle title='Tất cả bài viết...' />
       <Tabs />
       <InputSearch />

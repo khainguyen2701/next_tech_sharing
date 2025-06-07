@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import MoreDropdown from "./MoreDropdown";
+import toSlug from "@/app/until/slug";
+import { useRouter } from "next/navigation";
 
 interface PostCardProps {
   author: string;
@@ -29,6 +31,12 @@ const PostCard: React.FC<PostCardProps> = ({
     { label: "📧  Chia sẻ tới Email", link: "#" },
     { label: "🔗  Sap chép liên kết", link: "#" }
   ];
+
+  const router = useRouter();
+  const handleClickTitle = (value: string) => {
+    const slug = toSlug(value);
+    router.push(`/posts/${slug}`);
+  };
   return (
     <div className='flex flex-col gap-6 rounded-lg border border-gray-200 p-4 shadow-sm'>
       <div className='flex flex-col-reverse justify-between lg:flex-row'>
@@ -37,7 +45,7 @@ const PostCard: React.FC<PostCardProps> = ({
             {tag.map((item, idx) => (
               <span
                 key={idx}
-                className='cursor-pointer rounded-md bg-gray-100 px-2 py-1 transition-shadow duration-200 hover:bg-green-200 hover:text-white'
+                className='cursor-pointer rounded-md bg-gray-100 px-2 py-1 font-inconsolata transition-shadow duration-200 hover:bg-green-200 hover:text-white'
               >
                 {item}
               </span>
@@ -55,7 +63,10 @@ const PostCard: React.FC<PostCardProps> = ({
       </div>
       <div className='flex items-start gap-4 rounded-lg'>
         <div className='flex-1 gap-4'>
-          <h2 className='mb-2 cursor-pointer text-lg font-bold text-gray-800 hover:text-green-300'>
+          <h2
+            className='mb-2 cursor-pointer text-lg font-bold text-gray-800 hover:text-green-300'
+            onClick={() => handleClickTitle(title)}
+          >
             {title}
           </h2>
           <p className='text-gray-700'>{short_describe}</p>
