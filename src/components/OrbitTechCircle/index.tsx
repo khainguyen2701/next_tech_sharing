@@ -65,7 +65,7 @@ const OrbitTechCircle = () => {
   return (
     <div
       ref={containerRef}
-      className='relative mx-auto h-[500px] w-full overflow-hidden'
+      className='relative mx-auto w-full overflow-hidden md:h-[300px] lg:h-[400px] xl:h-[500px]'
     >
       {techIcons.map((layer, layerIndex) => {
         const radius = radii[layerIndex];
@@ -73,10 +73,10 @@ const OrbitTechCircle = () => {
         return (
           <div
             key={layerIndex}
-            className='absolute inset-0 top-[600px] flex items-center justify-center'
+            className='absolute inset-0 flex items-center justify-center md:top-[350px] lg:top-[500px] xl:top-[600px]'
           >
             <div
-              className='animate-spin-slow relative'
+              className='relative animate-spin-slow'
               style={{
                 width: `${radius * 2}px`,
                 height: `${radius * 2}px`

@@ -79,7 +79,7 @@ const TechPromo = () => {
           </div>
 
           <div className='mt-6 w-full text-center md:ml-10 md:mt-0 md:w-2/3 md:text-left'>
-            <h1 className='text-8xl font-bold text-gray-900 md:text-5xl'>
+            <h1 className='text-2xl font-bold text-gray-900 md:text-5xl lg:text-6xl'>
               Tại đây, bạn sẽ tìm thấy những kiến thức hữu ích được chia sẻ một
               cách cô đọng và dễ hiểu
             </h1>
