@@ -18,6 +18,7 @@ export default withMT({
         "spin-slow": "spin 30s linear infinite"
       },
       fontFamily: {
+        sans: ["var(--font-inconsolata)", "sans-serif"],
         inter: "var(--font-inter)",
         montserrat: "var(--font-montserrat)",
         inconsolata: "var(--font-inconsolata)"

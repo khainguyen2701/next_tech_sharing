@@ -7,7 +7,7 @@ const Breadcrumbs = () => {
   const pathName = usePathname();
   const data = pathName.split("/").filter((segment) => segment !== "");
   return (
-    <div className='breadcrumbs overflow-hidden font-inconsolata text-sm font-semibold'>
+    <div className='breadcrumbs mt-4 overflow-hidden text-sm font-semibold'>
       <ul className='flex items-center space-x-4 overflow-x-hidden text-ellipsis whitespace-nowrap'>
         <li>
           <Link href='/' className='inline-flex items-center gap-1 text-lg'>

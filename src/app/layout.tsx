@@ -5,11 +5,6 @@ import "dayjs/locale/zh-cn";
 import HeaderMainLayout from "./Layout/header";
 import FooterMainLayout from "./Layout/footer";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter"
-});
-
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat"
@@ -31,10 +26,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
-      <body
-        className={`${inter.variable} ${montserrat.variable} ${inconsolata.variable} antialiased`}
-      >
+    <html
+      lang='en'
+      className={`${montserrat.variable} ${inconsolata.variable} antialiased`}
+    >
+      <body className='font-sans'>
         <HeaderMainLayout />
         <main>{children}</main>
         <FooterMainLayout />

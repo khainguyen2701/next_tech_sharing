@@ -54,12 +54,12 @@ const TechPromo = () => {
                 key={index}
                 className='mb-6 rounded-lg border border-dashed border-gray-400 p-4'
               >
-                <h3 className='font-inconsolata text-lg font-semibold text-gray-800'>
+                <h3 className='text-lg font-semibold text-gray-800'>
                   {block.title}
                 </h3>
                 {block.items.map(({ label, size, widthPercent, color }, i) => (
                   <div key={i} className='mt-4'>
-                    <div className='flex justify-between font-inconsolata text-sm text-gray-600'>
+                    <div className='flex justify-between text-sm text-gray-600'>
                       <span>{label}</span>
                       <span>{size}</span>
                     </div>
@@ -71,9 +71,7 @@ const TechPromo = () => {
                     </div>
                   </div>
                 ))}
-                <p
-                  className={`mt-2 font-inconsolata text-sm ${block.noteColor}`}
-                >
+                <p className={`mt-2 text-sm ${block.noteColor}`}>
                   {block.note}
                 </p>
               </div>
@@ -81,17 +79,17 @@ const TechPromo = () => {
           </div>
 
           <div className='mt-6 w-full text-center md:ml-10 md:mt-0 md:w-2/3 md:text-left'>
-            <h1 className='font-inconsolata text-8xl font-bold text-gray-900 md:text-5xl'>
+            <h1 className='text-8xl font-bold text-gray-900 md:text-5xl'>
               Tại đây, bạn sẽ tìm thấy những kiến thức hữu ích được chia sẻ một
               cách cô đọng và dễ hiểu
             </h1>
-            <p className='mt-4 max-w-md font-inconsolata text-gray-600'>
+            <p className='mt-4 max-w-md text-gray-600'>
               từ mẹo lập trình, kinh nghiệm thực chiến đến các công cụ hỗ trợ
               phát triển nhanh và hiệu quả hơn. Mục tiêu là giúp bạn tiết kiệm
               thời gian, nâng cao kỹ năng và xây dựng sản phẩm chất lượng hơn
               mỗi ngày..
             </p>
-            <button className='mt-6 rounded-full border-2 border-gray-300 px-6 py-2 font-inconsolata font-semibold text-gray-700 transition hover:bg-gray-100'>
+            <button className='mt-6 rounded-full border-2 border-gray-300 px-6 py-2 font-semibold text-gray-700 transition hover:bg-gray-100'>
               Khám phá ngay →
             </button>
           </div>

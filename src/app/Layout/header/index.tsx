@@ -22,7 +22,7 @@ const HeaderMainLayout = () => {
 
   return (
     <>
-      <div className='mx-auto border-b border-gray-200 bg-gradient-to-r from-blue-50 to-green-50 p-4 text-center font-inconsolata tracking-wide text-gray-600 shadow-sm'>
+      <div className='mx-auto border-b border-gray-200 bg-gradient-to-r from-blue-50 to-green-50 p-4 text-center tracking-wide text-gray-600 shadow-sm'>
         Không chỉ là chia sẻ kiến ​​thức, mà còn là tự học, kết nối và để lại
         dấu ấn của bạn trong thế giới công nghệ.
       </div>
@@ -44,7 +44,7 @@ const HeaderMainLayout = () => {
               />
               <Link
                 href='/'
-                className='hidden items-center font-inconsolata text-2xl font-semibold text-gray-800 sm:flex'
+                className='hidden items-center text-2xl font-semibold text-gray-800 sm:flex'
               >
                 Technical Sharing
               </Link>

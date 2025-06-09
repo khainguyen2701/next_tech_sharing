@@ -25,12 +25,12 @@ const InputSearch = () => {
         type='text'
         value={searchValue}
         onChange={(event) => setSearchValue(event.target.value)}
-        className='flex-1 bg-transparent px-2 py-2 font-inconsolata tracking-wider text-neutral-500 focus:outline-none'
+        className='flex-1 bg-transparent px-2 py-2 tracking-wider text-neutral-500 focus:outline-none'
         placeholder='Tìm kiếm bài viết...'
       />
       <button
         onClick={handleSearch}
-        className='relative left-[-7px] flex items-center justify-center gap-2 rounded-full bg-green-400 px-4 py-1 font-inconsolata text-sm tracking-wider text-white transition duration-200 active:scale-95 active:bg-blue-600 sm:left-0 sm:text-base'
+        className='relative left-[-7px] flex items-center justify-center gap-2 rounded-full bg-green-400 px-4 py-1 text-sm tracking-wider text-white transition duration-200 active:scale-95 active:bg-blue-600 sm:left-0 sm:text-base'
       >
         Tìm kiếm
         <GrSearchAdvanced />

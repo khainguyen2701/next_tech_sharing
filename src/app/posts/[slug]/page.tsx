@@ -1,3 +1,4 @@
+import { posts } from "@/app/until/mockData/posts";
 import Appendix from "@/components/appendix";
 import MoreDropdown from "@/components/horizontalCard/MoreDropdown";
 import RelatedPosts from "@/components/relatedPosts";
@@ -5,13 +6,14 @@ import RelatedTopics from "@/components/relatedTopics";
 import { Metadata } from "next";
 import Image from "next/image";
 
-export async function generateMetadata({
-  params
-}: {
-  params: { slug: string };
-}): Promise<Metadata> {
-  return { title: "Hello world", description: "Test" };
-}
+// export async function generateMetadata({
+//   params
+// }: {
+//   params: { slug: string };
+// }): Promise<Metadata> {
+//   console.log("params", params.slug);
+//   return { title: "Hello world", description: "Test" };
+// }
 
 const mockData = {
   id: "docker-intro-001",
@@ -118,12 +120,12 @@ const PostDetailPage = () => {
               />
             </div>
             <div className='flex flex-col gap-6'>
-              <h1 className='font-inconsolata text-2xl font-bold lg:text-5xl'>
+              <h1 className='text-2xl font-bold lg:text-5xl'>
                 {mockData.title}
               </h1>
               <div className='grid grid-cols-10 gap-4'>
                 <div className='col-span-9'>
-                  <p className='font-inconsolata'>
+                  <p className=''>
                     <strong>Tác giả:</strong> {mockData.author} |{" "}
                     <em>Ngày đăng:</em> {mockData.date}
                   </p>
@@ -135,7 +137,7 @@ const PostDetailPage = () => {
             </div>
           </div>
           <div
-            className='prose-lg prose max-w-none font-inconsolata'
+            className='prose-lg prose max-w-none'
             dangerouslySetInnerHTML={{ __html: mockData.content }}
           />
         </div>
@@ -147,7 +149,7 @@ const PostDetailPage = () => {
         <RelatedTopics tags={mockData.tags} />
       </div>
       <div>
-        <RelatedPosts posts={mockData.tags} />
+        <RelatedPosts posts={posts} />
       </div>
     </div>
   );

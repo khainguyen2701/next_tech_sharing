@@ -12,7 +12,7 @@ const TodayTopHighlight = () => {
           <div className='flex justify-end'>
             <Link
               href={"posts"}
-              className='font-xl mb-6 cursor-pointer font-inconsolata font-bold text-neutral-400 hover:text-light-blue-400'
+              className='font-xl mb-6 cursor-pointer font-bold text-neutral-400 hover:text-light-blue-400'
             >
               Xem tất cả...
             </Link>

@@ -45,7 +45,7 @@ const PostCard: React.FC<PostCardProps> = ({
             {tag.map((item, idx) => (
               <span
                 key={idx}
-                className='cursor-pointer rounded-md bg-gray-100 px-2 py-1 font-inconsolata transition-shadow duration-200 hover:bg-green-200 hover:text-white'
+                className='cursor-pointer rounded-md bg-gray-100 px-2 py-1 transition-shadow duration-200 hover:bg-green-200 hover:text-white'
               >
                 {item}
               </span>

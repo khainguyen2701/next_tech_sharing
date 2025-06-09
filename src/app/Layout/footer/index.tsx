@@ -11,7 +11,7 @@ const FooterMainLayout = () => {
               <p className='font-inter text-xl font-bold tracking-widest sm:text-2xl'>
                 TECHNICAL SHARING
               </p>
-              <p className='font-inconsolata text-base font-light tracking-wider'>
+              <p className='text-base font-light tracking-wider'>
                 Providing trusted technology information since 2025
               </p>
             </div>
@@ -64,7 +64,7 @@ const FooterMainLayout = () => {
       </footer>
       <div className='bg-neutral p-4 text-neutral-content'>
         <div className='container mx-auto'>
-          <p className='text-center font-inconsolata text-base tracking-wide'>
+          <p className='text-center text-base tracking-wide'>
             @Khải Nguyễn - Since 2025
           </p>
         </div>

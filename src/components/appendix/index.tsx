@@ -17,7 +17,7 @@ function TreeNodeItem({ node }: { node: TreeNode }) {
   return (
     <li className='mb-1'>
       <div className='flex cursor-pointer select-none items-center'>
-        <span className='font-inconsolata text-gray-800 hover:text-green-300'>{`${node.id}. ${node.label}`}</span>
+        <span className='text-gray-800 hover:text-green-300'>{`${node.id}. ${node.label}`}</span>
       </div>
 
       {hasChildren && (

@@ -20,13 +20,13 @@ const MainCard = ({ item, isDescription = false }: MainCardProps) => {
           height={200}
           className='w-full object-cover transition duration-300 ease-in-out group-hover:scale-105 group-hover:grayscale'
         />
-        <div className='absolute left-4 top-4 cursor-pointer rounded-lg bg-green-50 px-3 py-1 font-inconsolata text-sm font-semibold tracking-wide text-neutral-400'>
+        <div className='absolute left-4 top-4 cursor-pointer rounded-lg bg-green-50 px-3 py-1 text-sm font-semibold tracking-wide text-neutral-400'>
           Travel
         </div>
       </div>
       <Link
-        href='/'
-        className='line-clamp-2 cursor-pointer overflow-hidden text-ellipsis font-inconsolata text-lg font-bold tracking-widest text-neutral-400 hover:text-blue-gray-700'
+        href={`/posts/${item.slug}`}
+        className='line-clamp-2 cursor-pointer overflow-hidden text-ellipsis text-lg font-bold tracking-widest text-neutral-400 hover:text-blue-gray-700'
       >
         {item?.title}
       </Link>
@@ -40,16 +40,16 @@ const MainCard = ({ item, isDescription = false }: MainCardProps) => {
           height={40}
           className='h-12 w-12 rounded-full object-cover'
         />
-        <p className='font-inconsolata text-sm font-semibold tracking-widest text-neutral-400'>
+        <p className='text-sm font-semibold tracking-widest text-neutral-400'>
           {item?.author?.name}
         </p>
         <BsDiamondFill className='text-sm font-semibold tracking-widest text-[#3756f7]' />
-        <p className='font-inconsolata text-sm font-semibold tracking-widest text-neutral-400'>
+        <p className='text-sm font-semibold tracking-widest text-neutral-400'>
           {dayjs(item?.published_at).format(ll)}
         </p>
       </div>
       {!isDescription && (
-        <p className='line-clamp-3 overflow-hidden text-ellipsis font-inconsolata tracking-wider text-[#444444]'>
+        <p className='line-clamp-3 overflow-hidden text-ellipsis tracking-wider text-[#444444]'>
           {item.short_description}
         </p>
       )}
