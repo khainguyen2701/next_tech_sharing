@@ -22,4 +22,4 @@ COPY --from=builder /usr/src/app/package.json ./package.json
 
 EXPOSE 3000
 
-CMD ["yarn", "start"]
+CMD ["yarn", "start", "--", "-H", "0.0.0.0", "-p", "3000"]
